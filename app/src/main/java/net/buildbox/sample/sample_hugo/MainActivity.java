@@ -13,12 +13,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toast();
+        toast("Hello, ", "World!");
     }
 
     @DebugLog
-    public String toast() {
+    public String toast(String args1, String args2) {
         Toast.makeText(this, "サンプルメッセージ", Toast.LENGTH_SHORT).show();
-        return "表示完了";
+        return args1 + args2;
     }
 }
